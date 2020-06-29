@@ -16,7 +16,7 @@ config below
 saveto = OpenMe.split(".")[0] + ".ji"
 
 
-img = Image.open(OpenMe,mode="r")
+img = Image.open(OpenMe,mode="r").convert("RGBA")
 
 data = json.loads('{"image": [],"colormap": {},"name": ""}')
 
