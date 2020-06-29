@@ -24,7 +24,7 @@ JI stands for Json Image. Thats right. I wrote an image format that only uses js
 ```
 
 Basically, i store an image using numbers for each pixel, then i map each number to a hex color in the rgba format. the above json maps to (scalled to 100x the size for visibility, original was 5x5):
-![https://github.com/Vortetty/JI/raw/master/TestBig.png](TestBig)
+![https://raw.githubusercontent.com/Vortetty/JI/master/TestBig.png](TestBig)
 
 the format is also lossless.
 
