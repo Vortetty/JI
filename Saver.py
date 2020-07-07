@@ -3,6 +3,7 @@ from PIL import Image
 
 
 OpenMe = "" #file to convert
+ColorCount = 0 #0 makes no palette changes, any number above will change the number of colors used to that many colors
 
 
 
@@ -15,8 +16,10 @@ config below
 '''
 saveto = OpenMe.split(".")[0] + ".ji"
 
-
-img = Image.open(OpenMe,mode="r").convert("RGBA")
+if ColorCount <= 0:
+    img = Image.open(OpenMe,mode="r").convert("RGBA")
+else:
+    img = Image.open(OpenMe,mode="r").convert("RGBA", palette=Image.ADAPTIVE, colors=5)
 
 data = json.loads('{"image": [],"colormap": {},"name": ""}')
 
